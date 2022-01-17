@@ -1,3 +1,4 @@
+import { createSchema } from "./utils/createSchema";
 import "reflect-metadata";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { ApolloServer } from "apollo-server-express";
@@ -14,20 +15,7 @@ import cors from "cors";
 const main = async () => {
   await createConnection();
 
-  const schema = await buildSchema({
-    resolvers: [__dirname + "/modules/**/*.ts"],
-    // checking for authorization SOLUTION 1
-    authChecker: ({ context: { req } }, roles) => {
-      // roles --> can be passed from the @Authorization decorator
-      // here we can read the user from context
-      // and check his permission in the db against the `roles` argument
-      // that comes from the `@Authorized` decorator, eg. ["ADMIN", "MODERATOR"]
-
-      if (req.session.userId) return true;
-
-      return false; // or false if access is denied
-    },
-  });
+  const schema = await createSchema();
 
   const plugins = [];
 
