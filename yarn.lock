@@ -815,6 +815,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/graphql-query-complexity@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@types/graphql-query-complexity/-/graphql-query-complexity-0.2.1.tgz#5166c7f32b6cd0a24f1aad5e00ca513b82b7f0e0"
+  integrity sha512-PxYhF92UFagAl9UIep8seEUd9j18JardL9ZM9tOfP02fWot9ZlkBYYGFwSZ7fRE6HTva/Yr4BQem7b4P/TgDPA==
+  dependencies:
+    graphql-query-complexity "*"
+
 "@types/graphql-upload@^8.0.9":
   version "8.0.9"
   resolved "https://registry.yarnpkg.com/@types/graphql-upload/-/graphql-upload-8.0.9.tgz#7e248af0cf0bae40968a114b26322801562ee48f"
@@ -2200,6 +2207,13 @@ graceful-fs@^4.1.2, graceful-fs@^4.2.4:
   version "4.2.9"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
+
+graphql-query-complexity@*, graphql-query-complexity@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/graphql-query-complexity/-/graphql-query-complexity-0.11.0.tgz#6078e72a39a410bb5285673077565ec8ee127c6b"
+  integrity sha512-1Ns64a41XYLehYFxZwoEn7i7myUQPd/fLRZPZ73ULjln4VBWMwptzB8LiPWNaRHsTjLMkecZPeqmuKYNXrFIGA==
+  dependencies:
+    lodash.get "^4.4.2"
 
 graphql-query-complexity@^0.7.0:
   version "0.7.2"

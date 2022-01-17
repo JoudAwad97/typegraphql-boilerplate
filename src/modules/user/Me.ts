@@ -4,7 +4,7 @@ import { User } from "src/entity/User";
 
 @Resolver(User)
 export class RegisterResolver {
-  @Query(() => User, { nullable: true })
+  @Query(() => User, { nullable: true, complexity: 5 })
   async me(@Ctx() ctx: MyContext): Promise<User | undefined> {
     // @ts-ignore
     if (ctx.req.session!.userId) return undefined;
