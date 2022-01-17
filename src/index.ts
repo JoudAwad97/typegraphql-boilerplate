@@ -1,4 +1,3 @@
-import { LoginResolver } from "./modules/user/Login";
 import "reflect-metadata";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { ApolloServer } from "apollo-server-express";
@@ -6,19 +5,17 @@ import Express from "express";
 // @ts-ignore
 import { buildSchema, formatArgumentValidationError } from "type-graphql";
 import { createConnection } from "typeorm";
-import { RegisterResolver } from "./modules/user/Register";
 import session from "express-session";
 
 import connectRedis from "connect-redis";
 import { redis } from "./redis";
 import cors from "cors";
-import { ConfirmResolver } from "./modules/user/ConfirmUser";
 
 const main = async () => {
   await createConnection();
 
   const schema = await buildSchema({
-    resolvers: [RegisterResolver, LoginResolver, ConfirmResolver],
+    resolvers: [__dirname + "/modules/**/*.ts"],
     // checking for authorization SOLUTION 1
     authChecker: ({ context: { req } }, roles) => {
       // roles --> can be passed from the @Authorization decorator
