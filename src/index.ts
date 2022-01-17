@@ -38,7 +38,7 @@ const main = async () => {
     schema,
     plugins,
     formatError: formatArgumentValidationError,
-    context: ({ req }: any) => ({ req }),
+    context: ({ req, res }: any) => ({ req, res }),
   });
 
   const app = Express();
