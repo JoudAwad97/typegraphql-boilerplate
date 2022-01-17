@@ -1,0 +1,14 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 10002,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "test",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/entity/*.*"],
+  "migrations": ["src/migration/*.*"],
+  "subscribers": ["src/subscriber/*.*"]
+}

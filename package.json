@@ -1,0 +1,43 @@
+{
+  "name": "typegraphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev --respawn ts-node ./src/index.ts"
+  },
+  "dependencies": {
+    "apollo-server-core": "^3.6.1",
+    "apollo-server-express": "^3.6.1",
+    "bcryptjs": "^2.4.3",
+    "class-validator": "^0.13.2",
+    "connect-redis": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "graphql": "^15.3.0",
+    "ioredis": "^4.28.3",
+    "nodemailer": "^6.7.2",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.41",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/connect-redis": "^0.0.18",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-session": "^1.17.4",
+    "@types/graphql": "^14.5.0",
+    "@types/ioredis": "^4.28.7",
+    "@types/node": "^17.0.8",
+    "@types/nodemailer": "^6.4.4",
+    "@types/uuid": "^8.3.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
